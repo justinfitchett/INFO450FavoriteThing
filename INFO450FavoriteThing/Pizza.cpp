@@ -39,11 +39,10 @@ int Pizza::GetUserInput()
 	cin.ignore();
 	cout << "How many? " << endl;
 	cin >> numofPizzas;
-	cout << "Where do you want it delivered? " << endl;
-	getline(cin, location);
 	cin.ignore();
 	cin.clear();
-
+	cout << "Where do you want it delivered? " << endl;
+	getline(cin, location);
 	return 0;
 }
 

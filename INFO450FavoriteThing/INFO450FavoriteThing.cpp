@@ -33,12 +33,12 @@ int main()
 		while (!infile.eof())
 		{
 			string name, toppings, size, numofPizzas, location;
-			getline(infile, name, ',');
+			getline(infile, name, '|');
 			if (name.length())
 			{
-				getline(infile, toppings, ',');
-				getline(infile, size, ',');
-				getline(infile, numofPizzas, ',');
+				getline(infile, toppings, '|');
+				getline(infile, size, '|');
+				getline(infile, numofPizzas, '|');
 				getline(infile, location, '\n');
 				myEntry[count] = new Pizza(name, toppings, size, stoi(numofPizzas), location);
 				count++;

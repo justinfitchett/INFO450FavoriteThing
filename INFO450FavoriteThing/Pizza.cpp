@@ -26,20 +26,25 @@ Pizza::Pizza(string n, string t, string s, int num, string l)
 	location = l;
 }
 
-void Pizza::GetUserInput()
+int Pizza::GetUserInput()
 {
 	cout << "What type of pizza do you want? " << endl;
 	getline(cin, name);
+	cin.ignore();
 	cout << "List any toppings that you wish add: " << endl;
 	getline(cin, toppings);
+	cin.ignore();
 	cout << "What size (Small, Medium, Large, or X-Large)? " << endl;
 	getline(cin, size);
+	cin.ignore();
 	cout << "How many? " << endl;
 	cin >> numofPizzas;
-	cin.ignore();
-	cin.clear();
 	cout << "Where do you want it delivered? " << endl;
 	getline(cin, location);
+	cin.ignore();
+	cin.clear();
+
+	return 0;
 }
 
 void Pizza::Display()

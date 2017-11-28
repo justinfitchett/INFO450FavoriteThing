@@ -5,6 +5,7 @@
 #include "pizza.h"
 #include <fstream>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -16,12 +17,14 @@ int main()
 	int count = 0;
 	int i;
 	string answer = "Y";
+	string filepath;
 
 	myEntry = new Pizza*[LISTSIZE];
 
 	cout << "Welcome to my favorite thing...PIZZA!!!" << endl;
 
 	cout << "Please enter the location of your file that you wish to save: " << endl;
+	getline(cin, filepath);
 
 	//read from a file - saves inventory items
 	ifstream infile("c:\\users\\jfitc\\Desktop\\FavPizza.txt");
@@ -44,7 +47,7 @@ int main()
 	}
 
 	//If user wants to add more things
-	cout << "You have " << count << "of pizza entries. Do you want to add more (Y/N)? " << endl;
+	cout << "You have " << count << " of pizza entries. Do you want to add more (Y/N)? " << endl;
 	cin >> answer;
 
 	//Get inventory items of Pizza entries
@@ -52,11 +55,12 @@ int main()
 	{
 		myEntry[count] = new Pizza();
 		if (myEntry[count]->GetUserInput() == 0)
-			count++;
 		{
-			cout << "Add more? " << endl;
-			cin >> answer;
+			count++;
 		}
+
+		cout << "Add another pizza entry? " << endl;
+		cin >> answer;
 
 	}
 

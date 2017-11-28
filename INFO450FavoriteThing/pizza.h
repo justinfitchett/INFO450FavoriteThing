@@ -15,7 +15,7 @@ private:
 public:
 	Pizza();
 	Pizza(string n, string t, string s, int num, string l);
-	void GetUserInput();
+	int GetUserInput();
 	void Display();
 
 	friend ofstream& operator<<(ofstream &fs, Pizza *item);

@@ -33,10 +33,10 @@ int Pizza::GetUserInput()
 	cin.ignore();
 	cout << "List any toppings that you wish add: " << endl;
 	getline(cin, toppings);
-	cin.ignore();
+	//cin.ignore();
 	cout << "What size (Small, Medium, Large, or X-Large)? " << endl;
 	getline(cin, size);
-	cin.ignore();
+	//cin.ignore();
 	cout << "How many? " << endl;
 	cin >> numofPizzas;
 	cin.ignore();

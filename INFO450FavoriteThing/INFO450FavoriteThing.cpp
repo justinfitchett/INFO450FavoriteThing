@@ -49,6 +49,8 @@ int main()
 	//If user wants to add more things
 	cout << "You have " << count << " of pizza entries. Do you want to add more (Y/N)? " << endl;
 	cin >> answer;
+	cin.ignore();
+	cin.clear();
 
 	//Get inventory items of Pizza entries
 	while (answer == "Y" || answer == "y")
